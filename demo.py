@@ -1,3 +1,10 @@
+# lien vers video : https://www.youtube.com/watch?v=CRDYO3Pu584&ab_channel=Codigo
+# https://github.com/JaidedAI/EasyOCR 
+# pip3 install easyocr
+# lien vers video : https://www.youtube.com/watch?v=2qK2W7ZM4g4&ab_channel=Arthurus
+# pip install pyautogui
+
+
 import time
 import pyautogui
 import easyocr
@@ -5,13 +12,13 @@ from PIL import Image, ImageDraw, ImageFont
 import webbrowser
 
 # Ouvrir le lien dans un navigateur web
-#webbrowser.open("https://www.snapchat.com/add/naslachiente/dX6SMH4gRGOdtCKqVvUksAAAgZWJpaXBqcW9wAY_5bZPtAY_5bY0rAAAAAA")
-#time.sleep(15)  # Attendre 15 secondes pour que la page se charge
+webbrowser.open("https://www.snapchat.com/add/naslachiente/dX6SMH4gRGOdtCKqVvUksAAAgZWJpaXBqcW9wAY_5bZPtAY_5bY0rAAAAAA")
+time.sleep(15)  # Attendre 15 secondes pour que la page se charge
 
 # Enregistrer la capture d'écran
 fichier = 'img.png'
-#screen = pyautogui.screenshot()
-#screen.save(fichier)
+screen = pyautogui.screenshot()
+screen.save(fichier)
 
 # Initialiser le lecteur OCR
 reader = easyocr.Reader(['fr'])
