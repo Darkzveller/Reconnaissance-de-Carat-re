@@ -4,20 +4,26 @@
 # lien vers video : https://www.youtube.com/watch?v=2qK2W7ZM4g4&ab_channel=Arthurus
 # pip install pyautogui
 
-
+# Importation de la bibliotheque permettant d'utiliser les delais
 import time
+# Importation de la bibliotheque permettant de faire une capture d'écran
 import pyautogui
+# Importation de la bibliotheque permettant d'utiliser les recherche internet
+import webbrowser
+# Importation de la bibliotheque permmettant d'effectuer le traitement d'image
 import easyocr
 from PIL import Image, ImageDraw, ImageFont
-import webbrowser
 
 # Ouvrir le lien dans un navigateur web
 webbrowser.open("https://www.snapchat.com/add/naslachiente/dX6SMH4gRGOdtCKqVvUksAAAgZWJpaXBqcW9wAY_5bZPtAY_5bY0rAAAAAA")
-time.sleep(15)  # Attendre 15 secondes pour que la page se charge
+# Attendre 15 secondes pour que la page se charge
+time.sleep(15)
 
-# Enregistrer la capture d'écran
+
 fichier = 'img.png'
+# effectue la capture d'écran
 screen = pyautogui.screenshot()
+# Enregistrer la capture d'écran
 screen.save(fichier)
 
 # Initialiser le lecteur OCR
