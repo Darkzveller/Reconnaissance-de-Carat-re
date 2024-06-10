@@ -38,7 +38,7 @@ def process_image():
     image_pil = Image.open(fichier)
     draw = ImageDraw.Draw(image_pil)
     font = ImageFont.load_default()  # Utiliser la police par défaut
-
+    #caca
     # Parcourir les résultats et dessiner les rectangles et le texte
     for (haut, droite, bas, gauche), mot, p in result:
         #Affiche les coordoone du mot trouver
