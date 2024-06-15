@@ -1,3 +1,4 @@
+
 # lien vers video : https://www.youtube.com/watch?v=CRDYO3Pu584&ab_channel=Codigo
 # https://github.com/JaidedAI/EasyOCR 
 # pip3 install easyocr
@@ -18,7 +19,7 @@ import keyboard  # Module pour gérer les entrées clavier
 # Ouvrir le lien dans un navigateur web
 #webbrowser.open("https://www.snapchat.com/add/naslachiente/dX6SMH4gRGOdtCKqVvUksAAAgZWJpaXBqcW9wAY_5bZPtAY_5bY0rAAAAAA")
 
-webbrowser.open("file:///C:/Users/elkat/Documents/Python/ReconnaissanceCaractereYounes/carte-bancaire-ing-direct.index.webp")
+webbrowser.open("https://www.laymoon.fr/wp-content/uploads/2024/06/application-carte-2-min-PhotoRoom-4-1.png")
 
 # Attendre 5 secondes pour que la page se charge
 time.sleep(5)
@@ -30,10 +31,14 @@ print('finish init')
 reader = easyocr.Reader(['fr'])
 
 def process_image():
-    x =  516
-    y = 223
-    width = 451
-    height = 734
+    #x =  516
+    #y = 223
+    #width = 451
+    #height = 734
+    x = 700
+    y = 400
+    width = 400
+    height = 250
     # Prendre une capture d'écran
     screen = pyautogui.screenshot(region=(x, y, width, height))
     screen.save(fichier)
@@ -66,6 +71,7 @@ def process_image():
 
     # Afficher l'image résultante
     #image_pil.show()
+    
 
 # Boucle infinie pour traiter les images
 while True:
