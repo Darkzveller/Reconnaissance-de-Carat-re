@@ -29,7 +29,7 @@ webbrowser.open("https://www.laymoon.fr/wp-content/uploads/2024/06/application-c
 # Attendre 5 secondes pour que la page se charge
 time.sleep(5)
 fichier = 'img.png'
-fichier_test = 'Carte_bancaire_Visa.png'
+fichier_test = 'v2.png'
 fichier =fichier_test
 print('finish init')
 
@@ -45,6 +45,8 @@ def process_image():
     #width = 451
     #height = 734
     compteur = 0
+    Flag_information = 0
+
     x = 700
     y = 400
     width = 400
@@ -73,22 +75,25 @@ def process_image():
        # print(resultats)
         if len(mot)==4 and mot.isdigit():
              #print(mot)
-             
             compteur = compteur +1
-                  #print("La chaîne ne contient que des chiffres.")
-                  #print(mot)
+            #print("La chaîne ne contient que des chiffres.")
+            #print(mot)
             nbr_code_carte[compteur] = mot
-            print(nbr_code_carte[compteur])
+            #print(nbr_code_carte[compteur])
+            #print(compteur)
+            if compteur == 4 :
+                 print('First flag')
+                 Flag_information =Flag_information+1
              
-        else :
-             #print("La chaîne ne contient pas exactement 4 caractères.Mais voici les caractère lu ")
-             #print(mot)
-             print('cc')
         if re.match(r'\d{2}/\d{2}', mot):
              date_expiration = mot
-             print(f"La chaîne '{date_expiration}' est au format 'dd/mm'.")
-             
-        
+             print('second flag')
+             Flag_information = Flag_information + 1
+             #print(f"La chaîne '{date_expiration}' est au format 'dd/mm'.")
+
+        if Flag_information == 2 :
+             Flag_information = Flag_information+1
+             print('Test REUSSI')  
 
         draw.rectangle([haut[0], haut[1], bas[0], bas[1]], outline=(0, 0, 255))
 
@@ -104,7 +109,8 @@ def process_image():
 
     # Afficher l'image résultante
     image_pil.show()
-    
+
+ 
 
 # Boucle infinie pour traiter les images
 while True:
