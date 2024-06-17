@@ -5,7 +5,7 @@
 # lien vers video : https://www.youtube.com/watch?v=2qK2W7ZM4g4&ab_channel=Arthurus
 # pip install pyautogui
 # pip install keyboard
-# # Importation de la bibliotheque permettant d'utiliser les delais
+# # Importation de la bibliotheque permettant d'utiliser les delaiskk
 import time
 # Importation de la bibliotheque permettant de faire une capture d'écran
 import pyautogui
