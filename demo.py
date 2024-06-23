@@ -79,7 +79,7 @@ def process_image():
             #print("La chaîne ne contient que des chiffres.")
             #print(mot)
             nbr_code_carte[compteur] = mot
-            #print(nbr_code_carte[compteur])
+            print(nbr_code_carte[compteur])
             #print(compteur)
             if compteur == 4 :
                  print('First flag')
@@ -87,13 +87,13 @@ def process_image():
              
         if re.match(r'\d{2}/\d{2}', mot):
              date_expiration = mot
-             print('second flag')
+          #    print('second flag')
              Flag_information = Flag_information + 1
-             #print(f"La chaîne '{date_expiration}' est au format 'dd/mm'.")
+             print(f"La chaîne '{date_expiration}' est au format 'dd/mm'.")
 
         if Flag_information == 2 :
              Flag_information = Flag_information+1
-             print('Test REUSSI')  
+          #    print('Test REUSSI')  
 
         draw.rectangle([haut[0], haut[1], bas[0], bas[1]], outline=(0, 0, 255))
 
@@ -108,7 +108,7 @@ def process_image():
         draw.text((haut[0] + 6, bas[1] - hauteur_texte - 5), mot, fill=(255, 255, 255, 255), font=font)
 
     # Afficher l'image résultante
-    image_pil.show()
+#     image_pil.show()
 
  
 
